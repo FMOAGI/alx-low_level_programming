@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -S _nasm=intel $CFILE
+gcc -s _nasm=intel $CFILE
