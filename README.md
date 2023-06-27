@@ -1,1 +1,1 @@
-positive anything
+Pointers, arrays and strings
