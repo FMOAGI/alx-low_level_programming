@@ -2,33 +2,33 @@
 #include <stdlib.h>
 /**
  * argstostr - main entry
- * @ac: int input
- * @av: double pointer array
+ * @at: int input
+ * @ad: double pointer array
  * Return: 0
  */
-char *argstostr(int ac, char **av)
+char *argstostr(int at, char **ad)
 {
 	int i, n, r = 0, l = 0;
 	char *str;
 
-	if (ac == 0 || av == NULL)
+	if (at == 0 || ad == NULL)
 		return (NULL);
 
-	for (i = 0; i < ac; i++)
+	for (i = 0; i < at; i++)
 	{
-		for (n = 0; av[i][n]; n++)
+		for (n = 0; ad[i][n]; n++)
 			l++;
 	}
-	l += ac;
+	l += at;
 
 	str = malloc(sizeof(char) * l + 1);
 	if (str == NULL)
 		return (NULL);
-	for (i = 0; i < ac; i++)
+	for (i = 0; i < at; i++)
 	{
-	for (n = 0; av[i][n]; n++)
+	for (n = 0; ad[i][n]; n++)
 	{
-		str[r] = av[i][n];
+		str[r] = ad[i][n];
 		r++;
 	}
 	if (str[r] == '\0')
